@@ -3,3 +3,277 @@
 write your code here
 
 */
+
+@media screen {
+.tm-nav-item-link:hover {
+  background-color: #f5f5f5;
+}
+
+.box-bg:hover h2.tm-section-title {
+  color: #fff;
+}
+
+.box-bg:hover {
+  background-color: lightskyblue;
+}
+
+.tm-sidebar,
+.tm-content-header,
+section {
+  box-shadow: 0 1px 10px 0 rgba(61, 55, 61, 0.7);
+}
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: lightskyblue transparent transparent transparent;
+}
+
+.tm-banner-inner {
+  background-color: #fff;
+}
+
+.tm-banner {
+  background-color: #76cdd7;
+}
+
+.tm-banner-text {
+  text-shadow: 0 3px 0 #76cdd7, 0 10px 2px #76cdd7;
+  letter-spacing: 5px;
+  word-spacing: 8px;
+  animation-name: rotateText;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateText {
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.heading ol {
+  list-style-type: lower-roman;
+}
+
+.heading h2 {
+  text-align: center;
+  color: lightskyblue;
+}
+
+.heading ol a {
+  position: relative;
+}
+
+.heading ol a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.heading ol a:visited {
+  color: #ffb347;
+}
+
+.heading ol a:hover::before {
+  content: '';
+  position: absolute;
+  border-left: 3px solid #ffb347;
+  width: 2px;
+  height: 20px;
+  left: -4px;
+  top: 1px;
+}
+
+.heading ol a.text::after {
+  content: 'New';
+  color: red;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-size: 11px;
+  top: -2px;
+  right: -20px;
+  position: absolute;
+}
+
+.tm-team-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-2-col {
+  display: flex;
+}
+
+section .tm-section-description {
+  text-indent: 25px;
+  line-height: 1.8;
+}
+
+section p:first-of-type {
+  font-style: italic;
+}
+
+.gallery-container .box-work {
+  padding: 10px;
+}
+
+.gallery-container .box-work:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.gallery-container .box-work p::first-letter {
+  font-size: 22px;
+}
+
+.gallery-container .box-work p::first-letter {
+  color: #000;
+}
+
+.form-control {
+  border: 2px solid transparent;
+  border-bottom-color: skyblue;
+  border-radius: .25rem;
+}
+
+.carousel-description {
+  font-style: italic;
+}
+
+textarea.form-control {
+  border-color: skyblue;
+  resize: none;
+}
+
+#contact_email {
+  background: url("../img/email-icon.png") no-repeat right center;
+  background-size: 28px;
+}
+
+.form-control:focus {
+  background-color: #76cdd7;
+  border: 2px solid skyblue;
+}
+
+#contact_email:focus {
+  background: #76cdd7 url("../img/email-icon.png") no-repeat right center;
+  background-size: 28px;
+}
+
+.submit-btn {
+  color: skyblue;
+  background: #fff;
+  border: 2px solid skyblue;
+  float: right;
+  border-radius: 0;
+  font-size: 1.5rem;
+  padding: 1rem 3.5rem;
+}
+
+.submit-btn:hover {
+  background-color: skyblue;
+  border-color: skyblue;
+}
+}
+
+@media print {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .tm-main-content {
+    padding-top: 0;
+  }
+
+  .tm-sidebar,
+  .tm-content-box::after,
+  .tm-team-img,
+  #about,
+  .blocks .tm-content-box,
+  section.tm-content-box,
+  .carousel-indicators {
+    display: none;
+  }
+
+  .heading ol li::first-letter {
+    color: lightskyblue;
+    font-size: 24px;
+  }
+
+  .heading ol li:nth-child(even) {
+    color: lightskyblue;
+    text-align: right;
+    padding-right: 750px;
+    list-style-type: none;
+  }
+
+  section.heading.tm-content-box {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .heading ol li:nth-child(odd) {
+    color: lightskyblue;
+    text-align: left;
+    padding-left: 750px;
+    list-style-type: none;
+  }
+
+  .tm-banner {
+    background: #fff;
+    padding: 0;
+  }
+
+  .tm-content-box {
+    display: block;
+    margin-bottom: 0px;
+  }
+
+  .padding-medium {
+    color: lightskyblue;
+    text-align: center;
+  }
+
+  .tm-banner-inner {
+    padding: 20px 0;
+  }
+
+  h2.tm-section-title,
+  .heading h2 {
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    font-weight: 300;
+  }
+
+  .flex-2-col {
+    display: block;
+  }
+
+  .tm-team-description-container {
+    max-width: none;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .tm-banner-text {
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+}
