@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework 11</title>
+  <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <h1><span>Todo</span> Cat List</h1>
+      <p class="notification"> Maximum item per list are created </p>
+      <form class="search">
+        <input class="action" type="text" name="search" placeholder="Add new action">
+        <button type="submit" class="add_button">+</button>
+      </form>
+      <hr>
+    </header>
+    <main>
+      <ul class="list">
+        <li draggable="true">
+          <input type="checkbox" name="list_item" id="checkbox-0" class="checkbox">
+          <label for="checkbox-0">Find the cat</label>
+          <i class="material-icons edit">edit</i>
+          <i class="material-icons delete">delete</i>
+        </li>
+      </ul>
+    </main>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
